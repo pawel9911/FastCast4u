@@ -6,85 +6,19 @@
 
 /* header */
 header{
-  width: 100%;
   box-shadow: -5px -5px 10px 6px gray;
 }
-.mainPanel{
-  width: 100%;
+.appBar{
   background-color: rgb(0, 125, 184);
-  display: flex;
-  justify-content: center;
-}
-.containerHeader{
-  width: 1200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.contactHeader{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 36px;
-}
-.contactHeader button{
-  background: none;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  color: white;
-  font-size: 16px;
-}
-.contactHeader button:hover{
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px 15px;
-  cursor: pointer;
-}
-.logoCal{
-  margin-right: 5px;
-}
-.phoneLogo img, .comment img{
-  width: 14px;
-  height: 14px;
 }
 .linkSocialMedia{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 200px;
-}
-.linkSocialMedia a{
-  display: flex;
-  align-items: center;
-}
-.linkSocialMedia a img{
-  width: 20px;
-  height: 20px;
+  max-width: 200px;
 }
 .logPanel{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.logPanel a img{
-  max-width: 300px;
-  margin: 10px;
+  margin: 15px;
 }
 
 /* main */
-.container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-h2{
-  font-size: 30px;
-  font-weight: 400;
-  margin: 1em 0 0.2em 0;
-}
 p{
   font-size: 18px;
   font-weight: 300;
@@ -100,35 +34,12 @@ p{
   cursor: pointer;
   margin: 30px;
 }
-.fullOffer::after{
-  clear: both;
-  content: url(./assets/down-arrow.svg);
-  display: block;
-  width: 20px;  
-  height: 20px;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 /* package */
-.packages{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 1200px;
-  max-height: 450px;
-}
 .package{
-  width: 30%;
-  height: 400px;
+  min-height: 440px;
   font-size: 10px;
   margin: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   box-shadow: 1px 2px 25px 0.25px gray;
 }
 .package h3{
@@ -138,6 +49,17 @@ p{
   text-align: center;
   padding: 1em 0.5em;
   border-bottom: 2px solid rgba(128, 128, 128, 0.411);
+}
+.package p{
+  margin: 0.7em;
+}
+.package button{
+  background-color: rgb(0, 125, 184);
+  border-radius: 5px;
+  padding: 1em 1.5em;
+  margin: 2em;
+  border: none;
+  color: white;
 }
 .packagePrice{
   margin: 1.25em;
@@ -162,28 +84,17 @@ p{
   top: -10px;
   left: -16px;
 }
-.package p{
-  margin: 0.7em;
-}
-.package button{
-  background-color: rgb(0, 125, 184);
-  border-radius: 5px;
-  padding: 1em 1.5em;
-  margin: 2em;
-  justify-self: flex-end;
-  border: none;
-  color: white;
-}
 
 /* Oferta */
 .order{
-  width: 100%;
-  display: flex;
-} 
+  margin: 30px;
+  box-sizing: border-box;
+}
 .order img{
   max-width: 50%;
   max-height: 370px;
-  padding: 30px;
+  font-size: 30px;
+  padding: 1em;
 }
 .options{
  font-size: 22px;
@@ -200,36 +111,24 @@ p{
   margin-bottom: 0.5em;
   font-size: 0.85em;
 }
-.options span{
+.colorDescription{
   color: black;
 }
-.orderNow{
-  background-color: rgb(170, 0, 70);
-  border-radius: 3px;
-  border: none;
-  padding: 8px 30px;
-  color: white;
-  margin-top: 2em;
-  cursor: pointer;
-}
 
+.order button{
+  border-radius: 3px;
+  padding: 8px 30px;
+  margin-top: 2em;
+  background-color: rgb(170, 0, 70);
+  border: none;
+  color: white;
+}
 
 /* Stopka */
-footer{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .platforms{
   font-size: 15px;
-  display: flex;
   width: 100%;
-  flex-direction: row;
-  justify-content: center;
 }
-
 .platforms img{
   max-width: 150px;
   margin: 2em;

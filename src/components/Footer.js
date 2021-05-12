@@ -1,15 +1,21 @@
 import google from '../assets/google.svg';
 import apple from '../assets/apple.svg';
+import { ButtonBase, Grid, Typography } from '@material-ui/core';
+
 
 const Footer = () =>{
     return (
-        <footer>
-            <h2>Download Demo App</h2>
-            <div className='platforms'>
-                <a href='/'><img src={google} alt='Google'></img></a>
-                <a href='/'><img src={apple} alt='Apple'></img></a>
-            </div>
-        </footer>
+        <Grid container direction='column' alignItems='center' maxWidth='xl' >
+            <Typography align='center' variant='h3' component='h2'>Download Demo App</Typography>
+            <Grid container direction='row' justify='center'  className='platforms'>
+                <ButtonBase component='a'>
+                    <img src={google} alt='Google'/>
+                </ButtonBase>
+                <ButtonBase component='a'>
+                    <img src={apple} alt='Apple'/>   
+                </ButtonBase>
+            </Grid>
+        </Grid>
     )
 }
 

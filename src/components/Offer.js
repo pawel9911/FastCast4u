@@ -1,5 +1,9 @@
+import {Container, Grid } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import Package from "./Package"
+import Package from "./Package";
+import androidImg from '../assets/android.png';
+import iosImg from '../assets/IP.png';
+import iosAndroid from '../assets/IP&android.png';
 
 const Offer = () =>{
     const android = ['Android Smartphones','Android Tablets'];
@@ -20,13 +24,13 @@ const Offer = () =>{
         .then(data => setPricieBundle(data.regular))
     },[])
     return(
-        <div>
-            <div className='packages'>
-                <Package name='Android App' forWho={android} price={priceAndriod}/>
-                <Package name='Android & iOS App' height='450px' forWho={androidIOS} price={priceBundle}/>
-                <Package name='iOS App'forWho={iOS} price={priceIos}/>
-            </div>
-        </div>
+        <Container maxWidth='xl'>
+            <Grid container direction='row' justify='center' alignItems='center'>
+                <Package name='Android App' forWho={android} price={priceAndriod} src={androidImg}/>
+                <Package name='Android & iOS App' height='500px' forWho={androidIOS} price={priceBundle} src={iosAndroid}/>
+                <Package name='iOS App'forWho={iOS} price={priceIos} src={iosImg}/>
+            </Grid>
+        </Container>
     )
 }
 
