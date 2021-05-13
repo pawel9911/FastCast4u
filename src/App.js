@@ -6,10 +6,55 @@ import Header from './components/Header';
 import Order from './components/Order';
 import Footer from './components/Footer';
 import Offer from './components/Offer';
-import {Button, Grid, Typography } from '@material-ui/core';
+import {Button, Grid, Typography} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme)=>({
+  h3: {
+    margin: '1em 0 0.2em 0',
+    textAlign: 'center',
+    [theme.breakpoints.down('md')]:{
+      fontSize: '35px',
+    },
+    [theme.breakpoints.down('sm')]:{
+      fontSize: '25px',
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '15px',
+    },
+  },
+  p: {
+    marginBottom: '1em',
+    textAlign:'center',
+    [theme.breakpoints.down('md')]:{
+      fontSize: '14px',
+    },
+    [theme.breakpoints.down('sm')]:{
+      fontSize: '12px',
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '10px',
+    },
+  },
+  button:{
+    fontSize:'14px',
+    margin: '1em',
+    padding: '1em',
+    color: 'rgb(50, 0, 255)',
+    [theme.breakpoints.down('md')]:{
+      fontSize: '10px',
+    },
+    [theme.breakpoints.down('sm')]:{
+      fontSize: '8px',
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '6px',
+    },
+  },
+}));
 
  
 const Nav = () =>{
+  const classes = useStyles();
   const radioOptions = [
     ['Radio', 'and', 'Live TV Player'],
     ['Personalize App', 'in creator'],
@@ -35,11 +80,11 @@ const Nav = () =>{
       <>
       <Header/>
       <Grid container direction='column' alignItems='center' justify='center'>
-        <Typography  component='h2' variant='h3' style={{margin: '1em 0 0.2em 0'}}>CREATE YOUR RADIO MOBILE APP</Typography>
-        <Typography  component='p' style={{marginBottom: '1em'}}>Make your Radio Station Mobile and Interactive</Typography>
+        <Typography variant='h3' className={classes.h3}>CREATE YOUR RADIO MOBILE APP</Typography>
+        <Typography  component='p' className={classes.p}>Make your Radio Station Mobile and Interactive</Typography>
         <Offer/>
-        <Button className='fullOffer' onClick={handleClickStatus} color='primary' style={{margin: '1em'}}>Check out more</Button>
-        <Typography component='h2' variant='h4'>Radio App for Android and iOS</Typography>
+        <Button onClick={handleClickStatus} className={classes.button}>Check out more</Button>
+        <Typography variant='h4' className={classes.h3}>Radio App for Android and iOS</Typography>
         <Order img={phone} options={radioOptions} direction='row' spaceing='center'/>
       </Grid>
       <Footer/>
@@ -51,11 +96,11 @@ const Nav = () =>{
       <>
       <Header/>
       <Grid container direction='column' alignItems='center' justify='center'>
-        <Typography component='h2' variant='h3' style={{margin: '1em 0 0.2em 0'}}>CREATE YOUR RADIO MOBILE APP</Typography>
-        <Typography  component='p'>Make your Radio Station Mobile</Typography>
+        <Typography  variant='h3' className={classes.h3}>CREATE YOUR RADIO MOBILE APP</Typography>
+        <Typography  component='p' className={classes.p}>Make your Radio Station Mobile</Typography>
         <Order img={phone} whatIs={'Radio App for Android and iOS'} options={radioOptions} direction='row' spaceing='center'/>
-        <Button className='fullOffer' onClick={handleClickStatus} color='primary' style={{margin: '1em'}}>Check out more</Button>
-        <Typography component='h2' variant='h4'>Creating your Radio App can not be easier</Typography>
+        <Button onClick={handleClickStatus} className={classes.button}>Check out more</Button>
+        <Typography variant='h4' className={classes.h3}>Creating your Radio App can not be easier</Typography>
         <Order img={screen} whatIs={'Design your Mobile App Online'} options={designOptions} direction='row-reverse' spaceing='space-evenly'/>
       </Grid>
       <Footer/>
